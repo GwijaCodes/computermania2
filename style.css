@@ -49,7 +49,7 @@ body {
 
 /*NAVBAR*/
 nav {
-    width: 150vw;
+    width: 100vw;
     height: 40vh;
     position: absolute;
     top: 0;
@@ -58,11 +58,9 @@ nav {
     z-index: 10;
     display: flex;
     justify-content: center;
-}
-
-.nav-shape {
-    width: 100%;
-    height: 100%;
+    align-items: center;
+    background: url('./imgs/nav-shape.png') bottom center no-repeat;
+    background-size: cover;
 }
 
 .nav-shape-img {
@@ -73,11 +71,6 @@ nav {
 .logo {
     width: 20vw;
     margin: 0 auto;
-    position: absolute;
-    top: 10vh;
-    left: 50vw;
-    transform: translateX(-50%);
-    transition: top .3s;
 }
 
 .scrolling {
@@ -121,6 +114,7 @@ nav {
 
 .laptop {
     max-height: 80%;
+    z-index: 10;
     /*animation: floating 4s linear infinite;*/
 }
 
@@ -141,6 +135,7 @@ nav {
 h1 {
     font-size: 7vmin;
     white-space: nowrap;
+    text-align: end;
 }
 
 .slogan2 {
@@ -160,6 +155,7 @@ h1 {
     background-size: 100%;
     background-position: bottom;
     min-height: 100vh;
+    margin-top: 16%;
 }
 
 .clock {
