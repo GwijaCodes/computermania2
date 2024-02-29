@@ -173,7 +173,7 @@ h1 {
 }
 
 .circle-bar {
-    background: conic-gradient(var(--azzurro) 160deg, #fff 230deg);
+    background: conic-gradient(#fff 160deg, var(--azzurro) 230deg);
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -183,6 +183,7 @@ h1 {
     display: grid;
     place-content: center;
     animation: clock 5s linear infinite;
+    box-shadow: 0px 0px 10px 0px #00000045;
 }
 
 @keyframes clock {
@@ -191,7 +192,7 @@ h1 {
     }
 
     100% {
-        transform: rotate(-360deg)
+        transform: rotate(360deg)
     }
 }
 
