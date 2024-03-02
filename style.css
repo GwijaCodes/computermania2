@@ -75,6 +75,7 @@ body {
 }
 
 .laptop {
+    margin: auto;
     max-width: 100%;
     z-index: 11;
     /*animation: floating 4s linear infinite;*/
@@ -225,7 +226,6 @@ h1 {
     width: 100vw;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
     text-align: end;
     padding-bottom: 2%;
 }
@@ -241,8 +241,9 @@ h1 {
 
     .col-50{
         width: 100%;
-        padding: 0 10%;
+        padding: 0 5%;
     }
+    
 
     h1{
         font-size: 40px;
@@ -259,15 +260,15 @@ h1 {
     }
 
     .banner-slogan {
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         margin: 0;
+        padding: 0;
         padding-top: 20%;
     }
 
     .slogan2{
         font-size: 15px;
-        padding: 2%;
+        padding: 4%;
     }
 
     .icons {
@@ -278,18 +279,12 @@ h1 {
         height: 4%;
     }
 
-    .footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .footer img {
         margin-bottom: 2%;
     }
 
     .footer p {
         width: auto;
-        text-align: center !important;
         font-size: 10px;
         order: 2;
     }
@@ -300,8 +295,33 @@ h1 {
     }
 }
 
-@media (max-width: 430px) {
-    .info a {
-        width: 8%;
+@media (max-width: 550px) {
+    .icons{margin-top: 20px;}
+    .upper{transform: translateY(-20px);}
+    .icons a {
+        width: 10%;
     }
+
+    .info{
+        margin-top: 50%;
+        background-size: cover;
+    }
+
+    .banner-slogan{flex-direction: column; margin: auto; max-width: 80vw; padding-top: 20vh;}
+
+    h1{font-size: 25px;}
+
+    .laptop{max-width: 200px;}
+
+    .clock{max-width: 80vw;}
+    .circle-sm{height: 70%; width: 70%;}
+    
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 4vh;
+        text-align: center !important;
+    }
+
+
 }
