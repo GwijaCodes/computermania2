@@ -62,30 +62,59 @@ body {
     overflow-x: hidden;
     font-family: 'Cocogoose';
     font-weight: 300;
-    background: linear-gradient(180deg, #EBEBEB 0%, #FFF 100%);
+    background: linear-gradient(180deg, #d2d2d2ac 0%, #ffffff7a 100%);
+    background: url('./imgs/home-bg.png') top center no-repeat;
+
 }
 
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 10%;
+}
+
+.logo {
+    height: 60px;
+    filter: drop-shadow(0px 2px 4px #0000003d);
+    z-index: 100;
+}
+
+
+.wa img {
+    max-width: 100%;
+    padding: 10%;
+}
+
+.wa {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    background-color: #3CAF2F;
+    border-radius: 10px;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    transition: .5s all ease;
+    box-shadow: 0px 6px 10px 0px #00000045;
+}
+
+.wa:hover {
+    box-shadow: 0px 6px 10px 0px #000000c6;
+}
 
 /*HOME*/
 .home {
     display: flex;
-    align-items: flex-end;
     gap: 4vw;
     justify-content: center;
-    background: url('./imgs/home-bg.png') top center no-repeat;
-    padding: 20vh 10%;
+    padding: 6% 10%;
+    height: 90vh;
     min-height: 90vh;
 }
 
-.logo {
-    position: absolute;
-    top: 6%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10vw;
-    filter: drop-shadow(0px 2px 4px #0000003d);
-    z-index: 100;
-}
+
 
 .banner-slogan {
     display: flex;
@@ -279,30 +308,6 @@ h1 {
     border-width: 4px;
 }
 
-.wa img {
-    max-width: 100%;
-    padding: 10%;
-}
-
-.wa {
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #3CAF2F;
-    border-radius: 10px;
-    z-index: 100;
-    display: grid;
-    place-items: center;
-    transition: .5s all ease;
-    box-shadow: 0px 6px 10px 0px #00000045;
-}
-
-.wa:hover {
-    box-shadow: 0px 6px 10px 0px #000000c6;
-}
 
 /*MEDIA*/
 
@@ -354,19 +359,6 @@ h1 {
     .bl-text {
         font-size: 30px;
         white-space: nowrap;
-    }
-
-    .logo {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 100px;
-        transform: translate(0, 0);
-    }
-
-    .wa {
-        width: 40px;
-        height: 40px;
     }
 
     .home {
