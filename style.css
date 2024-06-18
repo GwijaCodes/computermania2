@@ -18,6 +18,7 @@
     flex-direction: row;
 }
 
+.col-50{width: 50%;}
 .col-30{width: 30%;}
 .col-70{width: 70%;}
 
@@ -31,7 +32,7 @@
 .bl-text {
     font-size: 50px;
     color: var(--azzurro);
-    text-shadow: 2px 2px 6px #000000d0;
+    text-shadow: 2px 2px 8px #000000;
 }
 
 * {
@@ -81,9 +82,8 @@ body {
     max-width: 90vw;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: end;
-    padding: 0 20%;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .laptop {
@@ -109,7 +109,7 @@ body {
 }
 
 h1 {
-    font-size: 7vmin;
+    font-size: 5vmin;
     white-space: nowrap;
     text-align: end;
     text-shadow: 2px 2px 4px #00000038;
@@ -343,5 +343,37 @@ h1 {
         text-align: center;
     }
 
+
+}
+
+.latest{
+
+}
+
+.fb-page{
+    margin: auto;
+    border-radius: 20px;
+    border: solid 2px var(--azzurro);
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px #00000045;
+}
+
+.wa{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #3CAF2F;
+    border-radius: 10px;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    transition: .5s all ease;
+}
+
+.wa:hover{
+    box-shadow: 0px 0px 10px 0px #00000045;
 
 }
