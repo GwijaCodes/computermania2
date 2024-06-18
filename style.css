@@ -293,7 +293,7 @@ h1 {
 
 .fb-page {
     cursor: pointer;
-    width: 100%;
+    width: fit-content;
     height: 100%;
     display: flex;
     justify-content: center;
