@@ -129,7 +129,6 @@ body {
 
 .laptop {
     z-index: 11;
-    height: 250px;
     width: 100%;
     border-radius: 20px;
     object-fit: cover;
