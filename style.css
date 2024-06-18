@@ -12,15 +12,23 @@
     min-height: 100vh;
 }
 
-.grid{
+.grid {
     display: flex;
     margin: 10% auto;
     flex-direction: row;
 }
 
-.col-50{width: 50%;}
-.col-30{width: 30%;}
-.col-70{width: 70%;}
+.col-50 {
+    width: 50%;
+}
+
+.col-30 {
+    width: 30%;
+}
+
+.col-70 {
+    width: 70%;
+}
 
 .wh-text {
     font-size: 20px;
@@ -30,7 +38,7 @@
 }
 
 .bl-text {
-    font-size: 50px;
+    font-size: 3rem;
     color: var(--azzurro);
     text-shadow: 2px 2px 8px #000000;
 }
@@ -60,37 +68,36 @@ body {
 
 /*HOME*/
 .home {
-    overflow-x: hidden;
     display: flex;
     align-items: flex-end;
+    gap: 4vw;
     justify-content: center;
     background: url('./imgs/home-bg.png') top center no-repeat;
-    height: 90vh;
+    padding: 20vh 10%;
     min-height: 90vh;
 }
 
-.logo{
+.logo {
     position: absolute;
-    top: 10%;
+    top: 6%;
     left: 50%;
     transform: translateX(-50%);
-    width: 20vw;
+    width: 10vw;
     filter: drop-shadow(0px 2px 4px #0000003d);
+    z-index: 100;
 }
 
 .banner-slogan {
-    max-width: 90vw;
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    max-height: 100%;
 }
 
 .laptop {
-    margin: auto;
-    height: 150px;
-    float: inline-end;
     z-index: 11;
+    max-width: 100%;
+    border-radius: 20px;
+    border: solid 2px var(--azzurro);
     /*animation: floating 4s linear infinite;*/
 }
 
@@ -109,17 +116,15 @@ body {
 }
 
 h1 {
-    font-size: 5vmin;
+    font-size: 2.4vw;
     white-space: nowrap;
-    text-align: end;
-    text-shadow: 2px 2px 4px #00000038;
 }
 
 .slogan2 {
     width: 100vw;
     height: 16vh;
     background-color: #fff;
-    font-size: 20px;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,20 +257,70 @@ h1 {
     color: var(--grigio);
 }
 
+
+.fb-page {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 20px;
+    border: solid 2px var(--azzurro);
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px 0px #00000037;
+    transition: .5s all ease;
+}
+
+.fb-page:hover {
+    box-shadow: 0px 4px 10px 0px #000000c6;
+    border-width: 4px;
+}
+
+.wa img {
+    max-width: 100%;
+    padding: 10%;
+}
+
+.wa {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #3CAF2F;
+    border-radius: 10px;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    transition: .5s all ease;
+    box-shadow: 0px 6px 10px 0px #00000045;
+}
+
+.wa:hover {
+    box-shadow: 0px 6px 10px 0px #000000c6;
+}
+
 /*MEDIA*/
 
 @media(max-width: 780px) {
 
     .col-30,
-    .col-70{
+    .col-70,
+    .col-50 {
         width: 100%;
         padding: 0 5%;
-        display: flex; align-items: center; justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    
 
-    h1{
-        font-size: 40px;
+
+    h1 {
+        font-size: 2rem;
         text-align: left;
     }
 
@@ -273,19 +328,7 @@ h1 {
         font-size: 30px;
     }
 
-    .home {
-        background-size: cover;
-        align-items: center;
-    }
-
-    .banner-slogan {
-        max-width: 90vw;
-        margin: auto;
-        padding: 0;
-        padding-top: 20%;
-    }
-
-    .slogan2{
+    .slogan2 {
         font-size: 15px;
         padding: 4%;
     }
@@ -312,30 +355,66 @@ h1 {
         font-size: 30px;
         white-space: nowrap;
     }
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px;
+        transform: translate(0, 0);
+    }
+
+    .wa {
+        width: 40px;
+        height: 40px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        padding: 25% 0;
+        height: auto;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .laptop {
+        max-width: 200px;
+    }
 }
 
 @media (max-width: 550px) {
-    .icons{margin-top: 20px;}
-    .upper{transform: translateY(-20px);}
+
+
+    .icons {
+        margin-top: 20px;
+    }
+
+    .upper {
+        transform: translateY(-20px);
+    }
+
     .icons a {
         width: 10%;
     }
-    .logo{width: 40vw;}
 
-    .info{
+    .info {
         margin-top: 50%;
         background-size: cover;
     }
 
-    .banner-slogan{flex-direction: column; margin: auto; max-width: 80vw; padding-top: 20vh; justify-content: center;}
+    h1 {
+        font-size: 16px;
+    }
 
-    h1{font-size: 25px;}
+    .clock {
+        max-width: 80vw;
+    }
 
-    .laptop{max-width: 200px; height: auto;}
+    .circle-sm {
+        height: 70%;
+        width: 70%;
+    }
 
-    .clock{max-width: 80vw;}
-    .circle-sm{height: 70%; width: 70%;}
-    
     .footer {
         flex-direction: column;
         align-items: center;
@@ -343,37 +422,5 @@ h1 {
         text-align: center;
     }
 
-
-}
-
-.latest{
-
-}
-
-.fb-page{
-    margin: auto;
-    border-radius: 20px;
-    border: solid 2px var(--azzurro);
-    padding: 10px;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px 0px #00000045;
-}
-
-.wa{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #3CAF2F;
-    border-radius: 10px;
-    z-index: 100;
-    display: grid;
-    place-items: center;
-    transition: .5s all ease;
-}
-
-.wa:hover{
-    box-shadow: 0px 0px 10px 0px #00000045;
 
 }
